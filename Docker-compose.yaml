@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend         
+    container_name: fintech-backend
+    ports:
+      - "5000:5000"     
+    environment:
+      - FLASK_ENV=development 
+      - DATABASE_URL=postgresql://postgres:admin@localhost:5432/wallet_db
+      - JWT_SECRET_KEY = jkere374smhgyer4dujs
+      - SECRET_KEY = yUI578hkwjht6
+    depends_on:
+      - db                    
+
+  frontend:
+    build: ./frontend/fintech_wallet_system        
+    container_name: fintech-frontend
+    ports:
+      - "3000:3000"           
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000

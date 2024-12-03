@@ -1,0 +1,10 @@
+node_modules/
+__pycache__/
+
+# Ignore environment variables and config files with secrets
+.env
+*.env
+
+# Ignore Git-related files
+.git
+.gitignore
