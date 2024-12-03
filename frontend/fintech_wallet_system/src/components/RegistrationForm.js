@@ -86,12 +86,12 @@ function RegistrationForm() {
 
             <label for="exampleInputEmail1">Email</label>
             <input type="email" className="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email" value={formData.email} onChange={handleChange} />
-            {errors.email && <span className="error">{errors.email}</span>}
+            {errors.email && <span className="text-danger">{errors.email}</span>}
 
 
             <label for="phone_number">Phone Number</label>
             <input type="" className="form-control" name="phone_number" aria-describedby="phoneHelp" placeholder="Enter phone number" value={formData.phone_number} onChange={handleChange} />
-            {errors.phone_number && <span className="error">{errors.phone_number}</span>}
+            {errors.phone_number && <span className="text-danger">{errors.phone_number}</span>}
 
           </div>
           <button type="submit" className="btn btn-primary mt-2">Submit</button>
